@@ -32,13 +32,13 @@ $(document).ready(function () {
         };
 
         // Dominant Color
-        var dominantColor = getDominantColor(image);
+        var dominantColor = ColorThief.getDominantColor(image);
         var dominantSwatch = imageSection.find('.dominantColor .swatches');
         appendColors([dominantColor], dominantSwatch);
 
         // Palette
         var colorCount = $image.attr('data-colorcount') ? $image.data('colorcount') : 10;
-        var medianPalette = createPalette(image, colorCount);
+        var medianPalette = ColorThief.createPalette(image, colorCount);
         var medianCutPalette = imageSection.find('.medianCutPalette .swatches');
         appendColors(medianPalette, medianCutPalette);
     });
